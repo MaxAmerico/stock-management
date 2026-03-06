@@ -23,7 +23,7 @@ Paradigm: Procedural Programming
 ## 📦 How to Use
 
 1. Clone the repository:
-   git clone https://github.com/MaxAmerico/electronic-store-inventory-system.git
+   git clone https://github.com/MaxAmerico/stock-menagement.git
 
 2. Navigate to the directory:
    cd electronic-store-inventory-system
