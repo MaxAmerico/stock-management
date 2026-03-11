@@ -38,6 +38,6 @@ Paradigm: Procedural Programming
 ## 📈 Future Improvements (Roadmap)
 
 I am currently working on evolving this project from a basic script to a robust system. The next steps include:
-* Create a Graphical User Interface(GUI)
+* Create a Graphical User Interface(GUI)(I still do not know if I am willing to make this)
 * Create a JSON file 
 * Create detailed sales reports exported to Excel.
