@@ -9,7 +9,7 @@ if (key in key_lists
     print('- - -VOCÊ ENTROU NO SISTEMA - - -')
     produtos = ['smartphone','notebook','tablet','smarttv','fonedeouvidobluetooth','headsetgamer','mousesemfio','tecladomecanico','monitor','impressora','scanner','webcam','caixadesombluetooth','smartwatch','consoledevideogame','controledevideogame','cameradigital','cameradeseguranca','roteadorwifi','modem','hdexterno','ssd','pendrive','powerbank','carregadorportatil','carregadorsemfio','drone','projetor','assistentevirtual','leitordeebook']
     print(produtos)
-
+while True:
     print('O que você deseja escolher?')
     escolher_acao = input('A. Adicionar produto. B. Excluir produto. C. Área do Administrador. ').upper()
     if escolher_acao == 'A':
@@ -18,10 +18,12 @@ if (key in key_lists
             novos_produtos = input('Você deseja adicionar quais produtos?(Por favor, separe por vírgula):')
             produtos.append(novos_produtos.lower())
             print(produtos)
+            continue
         if add_produto_or_produtos == 1:
             novo_produto = input('Você deseja adicionar qual produto?:')
             produtos.append(novo_produto.lower())
             print(produtos)
+            continue
     elif escolher_acao == 'B':
         del_produto_or_produtos = int(input('Você deseja deletar quantos produtos?'))
         if del_produto_or_produtos > 1:
@@ -31,23 +33,29 @@ if (key in key_lists
              if produto in produtos:
               produtos.remove(produto)
               print(produtos)
+              continue
              else:
               print('Desculpe, seu produto não está na lista')
+              continue
          
         if del_produto_or_produtos == 1:
             del_produto = input('Qual produto você deseja deletar?')
             produtos.remove(del_produto.lower())
             print(produtos)
+            continue
     elif escolher_acao == 'C':
         print('você entrou na área do administrador, por favor, coloque sua chave de acesso')
         login = input('LOGIN:')
         if login == '8055':
-            print('Acesso à área do administrador, por favor, escolha suas opções:')
-            escolha_login = input('A. Calcular total de produtos. B. Calcular média mensal. C. Consultar/Modificar lista de funcionários. D. Voltar: ').upper()
-            if escolha_login == 'A':
+            while True:
+             
+             print('Acesso à área do administrador, por favor, escolha suas opções:')
+             escolha_login = input('A. Ver total de produtos. B. Calcular média mensal. C. Consultar/Modificar lista de funcionários. D. Voltar: E. Fechar').upper()
+             if escolha_login == 'A':
                 total_de_produtos = len(produtos)
                 print(f'O total de produtos no estoque é de: {total_de_produtos} produtos.')
-            if escolha_login == 'B':
+                continue
+             if escolha_login == 'B':
                 primeiro_mes = float(input('Qual é o valor do primeiro mês? '))
                 segundo_mes = float(input('Qual é o valor do segundo mês? '))
                 terceiro_mes = float(input('Qual é o valor do terceiro mês? '))
@@ -66,24 +74,32 @@ if (key in key_lists
                 media_mensal = (valor_total_ano / 12) 
                 print("O valor total do ano é:", valor_total_ano)
                 print('A média mensal é:', media_mensal)
+                continue
 
 
         
-            if escolha_login == 'C':
+             if escolha_login == 'C':
                 funcionarios = ["alice", "bruno", "carla", "diego", "eduardo", "fernanda", "gabriel", "helena", "igor", "juliana"]
                 print(funcionarios)
                 demitir_ou_contratar = input('Você deseja: A. Contratar funcionário. B. Demitir funcionário. C. Voltar').upper()
                 if demitir_ou_contratar == 'A':
                     contratar_funcionario = input('Qual funcionário você gostaria de contratar?(Por favor, coloque somente o primeiro nome):')
                     funcionarios.append(contratar_funcionario.lower())
+                    print(funcionarios)
+                    continue
                 elif demitir_ou_contratar == 'B':
                     demitir_funcionario = input('Qual funcionário você gostaria  de demitir?(Por favor, coloque somente o primeiro nome):')
                     if demitir_funcionario in funcionarios:
                      funcionarios.remove(demitir_funcionario.lower())
+                     continue
                     else:
                         print('Desculpe, o funcionário não está na lista')
+                        continue
                 elif demitir_ou_contratar == 'C':
                     print('Voltando ao menu anterior...')
+                    continue
+             elif escolha_login == 'D':
+                break
 
 
 
@@ -92,3 +108,4 @@ if (key in key_lists
 
 else:
          print('Chave de acesso bloqueada!')
+                
