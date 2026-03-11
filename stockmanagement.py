@@ -1,9 +1,11 @@
-print('- - - VOCÊ ENTROU NO SISTEMA DE ESTOQUE DA LOJA DE DISPOSTIVOS ELETRÔNICOS')
+print('- - - VOCÊ ENTROU NO SISTEMA DE ESTOQUE DA LOJA DE DISPOSTIVOS ELETRÔNICOS - -')
 
-#This code is ugly and bad, I make it about 2 months ago and I am going to make many changes on it;
-#Read the readme for more info
-chave_de_acesso = input('Por favor, coloque a chave de acesso aqui:')
-if chave_de_acesso == '3024':
+key_lists = ['mari0', 'dogmaster']
+password_lists = ['russ1an', 'losters']
+key = input('Please, put your username here:')
+password = input('Please, put your password here:')
+if (key in key_lists
+     and password in password_lists):
     print('- - -VOCÊ ENTROU NO SISTEMA - - -')
     produtos = ['smartphone','notebook','tablet','smarttv','fonedeouvidobluetooth','headsetgamer','mousesemfio','tecladomecanico','monitor','impressora','scanner','webcam','caixadesombluetooth','smartwatch','consoledevideogame','controledevideogame','cameradigital','cameradeseguranca','roteadorwifi','modem','hdexterno','ssd','pendrive','powerbank','carregadorportatil','carregadorsemfio','drone','projetor','assistentevirtual','leitordeebook']
     print(produtos)
