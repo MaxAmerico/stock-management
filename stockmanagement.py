@@ -15,24 +15,29 @@ with open('users.json', 'w') as file:
 print('- - - Welcome to stock menagement - - -')
 
 login_or_register = input('What would you wish? A. Login. B. Register:').upper()
-while True:
- if login_or_register == 'A':
-  username = input('Put your username here:')
-  password = input('Put your password here:')
+if login_or_register == 'A':
+  while True:
 
- if (username in dic_accounts and dic_accounts[username] == password):
+   username = input('Put your username here:')
+   password = input('Put your password here:')
+
+   if (username in dic_accounts and dic_accounts[username] == password):
          
-         def main_code():
+         def header():
+           print("Welcome to the stock management")
            randomnumber = random.randint(1,999)
            print(f'Name: {username}')
            print(f'Temporary user code: {randomnumber}')
            return
-         main_code()
-         break
+         header()
 
+         def code1():
+            
+          break
 
- else:
-     print('We are developeing it yet')
+   else:
+      print('Please, try again')
+      continue
            
 
 
