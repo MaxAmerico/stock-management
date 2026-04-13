@@ -26,18 +26,13 @@ while True:
            randomnumber = random.randint(1,999)
            print(f'Name: {username}')
            print(f'Temporary user code: {randomnumber}')
+           return
+         main_code()
          break
 
 
  else:
-     count = 0
-     print('Please, try again(maximum 3 times)')  
-     count =+ 1 
-     if count == 3:
-        print('Maximum attempts, please, restart the program')  
-        break
-     else: 
-      continue  
+     print('We are developeing it yet')
            
 
 
